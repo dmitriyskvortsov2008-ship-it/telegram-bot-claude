@@ -1,4 +1,8 @@
 import os
+os.environ.pop('TELEGRAM_TOKEN', None)
+os.environ.pop('ANTHROPIC_API_KEY', None)
+
+import os
 for key in ['http_proxy', 'https_proxy', 'HTTP_PROXY', 'HTTPS_PROXY', 'all_proxy', 'ALL_PROXY']:
     os.environ.pop(key, None)
 
